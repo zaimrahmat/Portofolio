@@ -12,50 +12,205 @@
     <nav>
         <h2>Zaimur Rahmat</h2>
         <ul>
-            <li><a href="#tentang">Tentang</a></li>
-            <li><a href="#pengalaman">Pengalaman</a></li>
-            <li><a href="#proyek">Proyek</a></li>
-            <li><a href="#keahlian">Keahlian</a></li>
+            <li><a href="#" onclick="tampilkanHalaman('tentang')">Tentang</a></li>
+            <li><a href="#" onclick="tampilkanHalaman('pengalaman-kerja')">Pengalaman Kerja</a></li>
+            <li><a href="#" onclick="tampilkanHalaman('pengalaman-organisasi')">Organisasi</a></li>
+            <li><a href="#" onclick="tampilkanHalaman('proyek')">Proyek</a></li>
+            <li><a href="#" onclick="tampilkanHalaman('keahlian')">Keahlian</a></li>
         </ul>
     </nav>
 
-    <!-- Bagian Hero / Perkenalan -->
-    <section id="tentang" class="hero">
-        <h1>Halo, Saya Zaimur Rahmat</h1>
-        <p>Lulusan Teknik Telekomunikasi | Spesialis Cloud Computing, Jaringan Cisco & Keamanan Web</p>
-        <a href="mailto:zaim.rahmat57@gmail.com" class="btn">Hubungi Saya</a>
+    <!-- Halaman 1: Perkenalan & Deskripsi Diri -->
+    <section id="tentang" class="halaman aktif">
+        <div class="hero-container">
+            <div class="hero-img-box">
+                <img src="foto-profil.jpg" alt="Zaimur Rahmat" class="profil-img">
+            </div>
+            <div class="hero-text-box">
+                <h1>Halo, Saya Zaimur Rahmat</h1>
+                <h3>Fresh Graduate Teknik Telekomunikasi</h3>
+                <p class="tagline">Spesialis Cloud Computing, Jaringan Cisco & Keamanan Web</p>
+                <p class="deskripsi">
+                    Fresh graduate Teknik Telekomunikasi dengan pengalaman hands-on di komputer networking, konfigurasi jaringan Cisco, troubleshooting, dan network monitoring. Berpengalaman sebagai Practicum Assistant di Adaptive Network Laboratory serta memiliki pengalaman industri di Telkomsel. Tertarik mengembangkan karir di bidang IT Infrastructure dan Network Engineering.
+                </p>
+                <div class="hero-buttons">
+                    <button onclick="bukaModal()" class="btn">Hubungi Saya</button>
+                    <a href="https://www.linkedin.com/in/zaimur-rahmat" target="_blank" class="btn btn-outline">LinkedIn Profil</a>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Bagian Pengalaman -->
-    <section id="pengalaman">
+    <!-- Halaman 2: Pengalaman Kerja -->
+    <section id="pengalaman-kerja" class="halaman">
         <h2>Pengalaman Kerja</h2>
+        
         <div class="card">
-            <h3>Magang Service Quality Assurance (SQA) - Telkomsel</h3>
-            <p><strong>Jul 2025 - Agu 2025</strong></p>
-            <p>Menganalisis kondisi jaringan melalui pelaksanaan Drive Test dan Walk Test untuk mengidentifikasi masalah performa BTS.</p>
+            <h3>Magang SQA — Telkomsel</h3>
+            <p><strong>Bogor, Indonesia | Jul 2025 - Aug 2025</strong></p>
+            <p><em>Perusahaan telekomunikasi yang menyediakan layanan seluler, broadband, dan digital di Indonesia.</em></p>
+            <ul>
+                <li>Menganalisis kondisi jaringan pada 1 lokasi keluhan pelanggan melalui pelaksanaan Drive Test dan Walk Test untuk mengidentifikasi sumber masalah performa BTS.</li>
+                <li>Mendukung aktivitas Service Quality Assurance selama periode magang 40 hari melalui monitoring performa jaringan 4G dan fixed broadband, BTS Quality Control, serta inspeksi infrastruktur lapangan.</li>
+                <li>Menyusun laporan jaringan setiap kali ada keluhan pelanggan melalui pengumpulan dan analisis data monitoring broadband dan hasil inspeksi lapangan.</li>
+            </ul>
+            <div class="img-container">
+                <img src="gambar-magang.jpg" alt="Dokumentasi Magang Telkomsel" class="project-img">
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Practicum Assistant — Adaptive Network Laboratory</h3>
+            <p><strong>Bandung, Indonesia | Dec 2024 - Jun 2026</strong></p>
+            <p><em>Laboratorium di bawah Program Studi Teknik Telekomunikasi, Universitas Telkom.</em></p>
+            <ul>
+                <li>Membimbing 30-40 mahasiswa per modul praktikum (durasi ±2 minggu per modul) melalui pendampingan static routing, OSPF, RIP, dan analisis konektivitas.</li>
+                <li>Menyelesaikan kendala teknis mahasiswa pada setiap sesi praktikum melalui diagnosis dan troubleshooting masalah jaringan secara langsung.</li>
+                <li>Mendukung penyelesaian tugas praktikum bagi 30-40 mahasiswa per modul melalui bimbingan penerapan konsep jaringan komputer dan komunikasi data.</li>
+            </ul>
+            <div class="img-container">
+                <img src="gambar-lab.jpg" alt="Dokumentasi Adaptive Network Lab" class="project-img">
+            </div>
         </div>
     </section>
 
-    <!-- Bagian Proyek IT -->
-    <section id="proyek">
-        <h2>Proyek IT Terpilih</h2>
+    <!-- Halaman 3: Pengalaman Organisasi -->
+    <section id="pengalaman-organisasi" class="halaman">
+        <h2>Pengalaman Organisasi & Kepemimpinan</h2>
+
         <div class="card">
-            <h3>Sistem Perpustakaan Microservices</h3>
-            <p>Membangun aplikasi web dengan arsitektur microservices menggunakan Python, Docker, dan Supabase PostgreSQL, lalu di-deploy ke Microsoft Azure.</p>
+            <h3>Kepala Divisi People Development — Adaptive Network Laboratory</h3>
+            <p><strong>Bandung, Indonesia | Dec 2024 - Jun 2026</strong></p>
+            <ul>
+                <li>Memimpin Divisi Pengembangan Sumber Daya Manusia dalam merencanakan dan mengelola kegiatan internal laboratorium.</li>
+                <li>Mengkoordinasikan pelaksanaan kegiatan yang mendukung keterlibatan, komunikasi, dan pengembangan di antara anggota laboratorium.</li>
+                <li>Bekerja sama dengan anggota dan divisi lain dalam mempersiapkan dan melaksanakan berbagai kegiatan laboratorium.</li>
+            </ul>
         </div>
+
         <div class="card">
-            <h3>Web App Penetration Testing</h3>
-            <p>Melakukan pentest pada aplikasi web perbankan menggunakan Nmap, Gobuster, dan Burp Suite di Kali Linux untuk mencari kerentanan Broken Access Control.</p>
+            <h3>Staff Divisi Fasst — Telecommunication Event and Super League (Tesla)</h3>
+            <p><strong>Bandung, Indonesia | Oct 2023 - Dec 2023</strong></p>
+            <ul>
+                <li>Bertanggung jawab atas pemeliharaan ketertiban dan keamanan serta memastikan kesiapan kebutuhan medis selama acara berlangsung.</li>
+                <li>Mendukung pengelolaan layanan makanan dan minuman bagi panitia penyelenggara dan peserta acara.</li>
+            </ul>
         </div>
+
         <div class="card">
-            <h3>Cisco & SDN Network Configuration</h3>
-            <p>Mengonfigurasi OSPF, VLAN, dan inter-VLAN routing menggunakan Cisco Packet Tracer serta membangun topologi SDN dengan Ryu Controller.</p>
+            <h3>Staff Logistik — Gathrak 2023</h3>
+            <p><strong>Bandung, Indonesia | Apr 2023 - Jun 2023</strong></p>
+            <ul>
+                <li>Bertanggung jawab atas persiapan dan pengelolaan kebutuhan logistik, termasuk memastikan ketersediaan peralatan, bahan, dan tempat operasional acara.</li>
+            </ul>
         </div>
     </section>
+
+    <!-- Halaman 4: Proyek & Portofolio (Urutan: Final Project LTE-R, lalu tahun terbaru ke bawah) -->
+    <section id="proyek" class="halaman">
+        <h2>Proyek & Portofolio Teknis</h2>
+
+        <div class="card">
+            <h3>LTE-R Network Design (2026)</h3>
+            <p>Merancang jaringan LTE-R dua lapis untuk koridor LRT Jakarta Cawang–Dukuh Atas menggunakan Atoll dan MATLAB, mencakup perencanaan coverage, analisis KPI (RSRP, SINR, throughput, BER), dan integrasi layanan CBTC, VoLTE, CCTV, serta Wi-Fi penumpang.</p>
+            <div class="img-container">
+                <img src="gambar-lter.jpg" alt="LTE-R Network Design Atoll" class="project-img">
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Ethical Hacking (2026)</h3>
+            <p>Melakukan penetration testing pada aplikasi web perbankan (PHP/MySQL) untuk mengidentifikasi kerentanan OWASP A01:2021 Broken Access Control menggunakan Nmap, Gobuster, dan Burp Suite, serta menyusun rekomendasi secure coding.</p>
+            <div class="img-container">
+                <img src="gambar-pentest.jpg" alt="Web Pentest UniBank" class="project-img">
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Cloud Computing Project (2025)</h3>
+            <p>Mengembangkan Sistem Perpustakaan berbasis web dengan arsitektur microservices (Python/ASGI, Node.js frontend), autentikasi JWT dengan role-based access control, dan database PostgreSQL (Supabase), serta mendeploy seluruh service ke Microsoft Azure App Service.</p>
+            <div class="img-container">
+                <img src="gambar-perpustakaan.jpg" alt="Cloud Microservices Project" class="project-img">
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>SDN Project (2025)</h3>
+            <p>Mengembangkan topologi SDN menggunakan Ryu Controller dan Mininet, mengimplementasikan STP, routing Layer 3, dan ACL, serta menganalisis QoS jaringan menggunakan iPerf dan Wireshark.</p>
+            <div class="img-container">
+                <img src="gambar-sdn.jpg" alt="SDN Mininet Ryu Controller" class="project-img">
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Cisco Routing & Network Configuration (2024)</h3>
+            <p>Merancang dan mengonfigurasi topologi jaringan menggunakan Cisco Packet Tracer, mengimplementasikan static routing, OSPF, RIP, VLAN, inter-VLAN routing, dan DHCP untuk membangun konektivitas antar segmen jaringan.</p>
+            <div class="img-container">
+                <img src="gambar-cisco.jpg" alt="Cisco Packet Tracer Topology" class="project-img">
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Linux System & Virtual Networking (2024)</h3>
+            <p>Mengonfigurasi virtual machine Ubuntu menggunakan VirtualBox dengan setelan jaringan NAT dan Host-Only, serta menerapkan Linux CLI, package management, dan manajemen file/permission.</p>
+            <div class="img-container">
+                <img src="gambar-linux.jpg" alt="Ubuntu VirtualBox Configuration" class="project-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- Halaman 5: Keahlian -->
+    <section id="keahlian" class="halaman">
+        <h2>Keahlian & Kompetensi</h2>
+        <div class="card">
+            <p><strong>Hard Skills:</strong> Network Configuration (Cisco), Routing & Switching, VLAN & Inter-VLAN, OSPF, RIP, Static Routing, TCP/IP, LAN/WAN Infrastructure, IT Environment & Troubleshooting, SDN, Web Application Security, Database Management (SQL/MySQL/PostgreSQL), Cloud Deployment (Azure), Containerization (Docker), Linux Networking, Network Performance Analysis (QoS).</p>
+            <p><strong>Soft Skills:</strong> Analytical Thinking, Problem Solving, Teamwork & Collaboration, Communication, Adaptability.</p>
+            <p><strong>Tools & Software:</strong> Cisco Packet Tracer, Mininet, Ryu Controller, Wireshark, VMware Workstation, XAMPP, Linux, Atoll, MATLAB, Docker, Supabase/PostgreSQL, Microsoft Azure, Microsoft Office.</p>
+        </div>
+    </section>
+
+    <!-- Modal Pop-up Hubungi Saya -->
+    <div id="modalKontak" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="tutupModal()">&times;</span>
+            <h2>Hubungi Saya</h2>
+            <p>Silakan terhubung melalui kontak berikut:</p>
+            <div class="contact-info">
+                <p><strong>WhatsApp:</strong> <a href="https://wa.me/6287839091840" target="_blank">+6287839091840</a></p>
+                <p><strong>Email:</strong> <a href="mailto:zaim.rahmat57@gmail.com">zaim.rahmat57@gmail.com</a></p>
+            </div>
+        </div>
+    </div>
 
     <footer>
-        <p>&copy; 2026 Zaimur Rahmat. Dibuat dengan HTML & CSS.</p>
+        <p>&copy; 2026 Zaimur Rahmat. Dibuat dengan HTML, CSS, & JavaScript.</p>
     </footer>
 
+    <!-- JavaScript Navigasi dan Modal -->
+    <script>
+        function tampilkanHalaman(idHalaman) {
+            let semuaHalaman = document.querySelectorAll('.halaman');
+            semuaHalaman.forEach(function(halaman) {
+                halaman.classList.remove('aktif');
+            });
+            let halamanTujuan = document.getElementById(idHalaman);
+            halamanTujuan.classList.add('aktif');
+        }
+
+        function bukaModal() {
+            document.getElementById('modalKontak').style.display = 'flex';
+        }
+
+        function tutupModal() {
+            document.getElementById('modalKontak').style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            let modal = document.getElementById('modalKontak');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>

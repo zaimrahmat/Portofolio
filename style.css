@@ -1,4 +1,4 @@
-/* Reset Dasar */
+/* Reset Dasar & Tema Gelap */
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +6,6 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Tema Gelap */
 body {
     background-color: #121212;
     color: #e0e0e0;
@@ -39,33 +38,77 @@ nav ul li a {
     color: #e0e0e0;
     text-decoration: none;
     transition: color 0.3s ease;
+    cursor: pointer;
+    font-weight: 500;
 }
 
 nav ul li a:hover {
     color: #64ffda;
 }
 
-/* Section Umum */
-section {
-    padding: 60px 50px;
+/* Styling Tata Letak Halaman Utama (Hero) */
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    flex-wrap: wrap;
 }
 
-/* Hero Section */
-.hero {
+.hero-img-box {
+    flex: 1;
     text-align: center;
-    padding: 100px 20px;
+    min-width: 220px;
 }
 
-.hero h1 {
-    font-size: 3rem;
+.profil-img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #64ffda;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.hero-text-box {
+    flex: 2;
+    min-width: 300px;
+    text-align: left;
+}
+
+.hero-text-box h1 {
+    font-size: 2.5rem;
     color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.hero-text-box h3 {
+    color: #64ffda;
+    font-size: 1.2rem;
     margin-bottom: 10px;
 }
 
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
+.tagline {
+    font-size: 1.1rem;
     color: #b3b3b3;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.deskripsi {
+    color: #b3b3b3;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
 }
 
 .btn {
@@ -75,6 +118,8 @@ section {
     padding: 10px 20px;
     border-radius: 5px;
     font-weight: bold;
+    border: none;
+    cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
@@ -82,7 +127,47 @@ section {
     background-color: #52e0c4;
 }
 
-/* Kartu Pengalaman & Proyek */
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid #64ffda;
+    color: #64ffda;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.btn-outline:hover {
+    background-color: rgba(100, 255, 218, 0.1);
+}
+
+/* Sistem Tab / Halaman Navigasi */
+.halaman {
+    display: none; 
+    animation: fadeIn 0.4s ease-in-out;
+    padding: 40px 50px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.halaman.aktif {
+    display: block; 
+}
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(15px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+/* Kartu & Judul Section */
 .card {
     background-color: #1e1e1e;
     padding: 20px;
@@ -96,9 +181,101 @@ section {
     margin-bottom: 5px;
 }
 
+.card ul {
+    margin-top: 10px;
+    padding-left: 20px;
+    color: #cccccc;
+}
+
+.card li {
+    margin-bottom: 8px;
+}
+
 h2 {
     color: #64ffda;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    font-size: 2rem;
+}
+
+/* Styling Gambar Proyek & Pengalaman */
+.img-container {
+    margin-top: 15px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.project-img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    border: 1px solid #333;
+}
+
+/* Styling Modal Pop-up Kontak */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #1e1e1e;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    border: 1px solid #64ffda;
+    position: relative;
+    color: #e0e0e0;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.close-btn {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #64ffda;
+}
+
+.contact-info {
+    margin-top: 20px;
+    text-align: left;
+    background: #121212;
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid #2a2a2a;
+}
+
+.contact-info p {
+    margin: 10px 0;
+    font-size: 0.95rem;
+}
+
+.contact-info a {
+    color: #64ffda;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
 }
 
 /* Footer */
@@ -107,4 +284,32 @@ footer {
     padding: 20px;
     background-color: #1e1e1e;
     margin-top: 40px;
+    color: #888;
+}
+
+/* Responsif untuk Layar HP */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+    nav ul {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-text-box {
+        text-align: center;
+    }
+    .hero-buttons {
+        justify-content: center;
+    }
+    .halaman {
+        padding: 20px;
+    }
 }
